@@ -1,3 +1,9 @@
+#compiled python files and directories
 *.pyc
 __pycache__/
+
+#jupyter notebook checkpoints
 .ipynb_checkpoints/
+
+#system files
+.swp
