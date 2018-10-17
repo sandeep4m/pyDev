@@ -1,4 +1,5 @@
 import extract
+import sys
 
 
 class Player():
@@ -19,14 +20,15 @@ class Player():
         except KeyError as error:
             print(error)
 
-    def viewPlayer(self):
-        print("Name: " + self.name)
-        print("Team: " + extract.TEAMS[self.team])
-        print("Position: " + self.position)
-        print("Credits: " + str(self.credits))
+    def __str__(self):
+        output = ("Name: " + self.name,
+                  "Team: " + extract.TEAMS[self.team],
+                  "Position: " + self.position,
+                  "Credits: " + str(self.credits))
+        return("\n".join(output))
 
 
 if __name__ == "__main__":
-    profile = {"name": "Joel embiid", "team": "phi0", "position": "c", "credits": 19}
+    profile = {"name": "Joel embiid", "team": "phi", "position": "c", "credits": 19}
     B = Player(profile)
-    B.viewPlayer()
+    print(B)
