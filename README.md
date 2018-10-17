@@ -1,6 +1,7 @@
 # pyDev
-*under construction*
 
-* Python only codes and applications mostly. 
-* Everything from "Hello World!". 
-* Doesn't include [web devlopment](https://github.com/sandeep4m/webDev) and [data science](https://github.com/sandeep4m/dataScience) libraries and frameworks of python.
+> What does pyDev contain ?
+
+Projects predominantly of python(3.x), bigger than a script and smaller to be a standalone goes here, till they grow big or rots here through eternity. 
+
+<sub> _Doesn't include web devlopment or data science projects._
