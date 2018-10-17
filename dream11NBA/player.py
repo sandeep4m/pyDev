@@ -5,7 +5,7 @@ import sys
 class Player():
     "Implements dream11 NBA fantasy Player"
 
-    def __init__(self, profile):
+    def __init__(self, profile, injury=False):
         try:
             self.name = profile["name"].upper()
             if profile["team"].upper() in extract.TEAMS:
@@ -19,12 +19,18 @@ class Player():
             self.credits = float(profile["credits"])
         except KeyError as error:
             print(error)
+        self.isInjuredRested = injury
 
     def __str__(self):
+        if self.isInjuredRested:
+            status = "Injured or Rested"
+        else:
+            status = "Playing"
         output = ("Name: " + self.name,
                   "Team: " + extract.TEAMS[self.team],
                   "Position: " + self.position,
-                  "Credits: " + str(self.credits))
+                  "Credits: " + str(self.credits),
+                  "Status: " + status)
         return("\n".join(output))
 
 
